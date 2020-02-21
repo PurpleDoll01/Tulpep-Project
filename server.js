@@ -12,7 +12,7 @@ app.use(express.static('src'));
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html' ));
 
 io.on('connection', (socket) => {
-    setTimeout(function(){ io.emit('data', data); }, 0);
+    setTimeout(function(){ io.emit('data', data); }, 60000);
     console.log(data.characters)
 })
 
